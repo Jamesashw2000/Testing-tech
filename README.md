@@ -21,6 +21,18 @@ npm run dev
 
 Open the URL shown in the terminal (usually `http://localhost:5173`).
 
+## Deploy on Vercel
+
+1. Push this folder to GitHub. The repo must include the **`src`** folder (check on github.com that you see `src/pages`, `src/components`, etc.).
+2. In Vercel → **Import Project** → select the repo.
+3. **Root Directory:**
+   - If the repo contains only this app (you see `package.json` at the top level): leave Root Directory **empty** / `.`
+   - If the repo is a parent folder and this app lives inside `admin-invite-flow`: set Root Directory to **`admin-invite-flow`**
+4. Build Command: `npm run build` · Output Directory: `dist`
+5. Deploy.
+
+If build fails with “No inputs were found”, the `src` folder is missing from GitHub or the Root Directory is wrong.
+
 ## Project structure
 
 - `src/pages/BuildAdminTeam.tsx` — main screen and flow logic
